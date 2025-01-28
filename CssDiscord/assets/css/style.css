@@ -1,0 +1,306 @@
+/* Importando uma fonte personalizada com @font-face */
+@font-face {
+    font-family: 'Luckiest Guy';
+    src: url('../fonts/LuckiestGuy-Regular.ttf') format('truetype');
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px; /* Base font size */
+}
+
+/* Aplicando Luckiest Guy para todos os títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Luckiest Guy', sans-serif;
+}
+
+/* Header Section */
+.header-background {
+    position: relative;
+    width: 100%;
+    min-height: 600px; /* Ajustar a altura mínima do header */
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 16px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    color: white; /* Mudar a cor do texto para branco */
+}
+
+.header-title {
+    grid-row: 1 / 2;
+    width: 100%;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    color: white; /* Mudar a cor do título para branco */
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    opacity: 1;
+    align-self: end;
+}
+.header-paragraph {
+    grid-row: 2 / 3;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; /* Ajustar o espaçamento entre linhas */
+    text-align: center;
+    color: white; /* Mudar a cor do parágrafo para branco */
+    opacity: 1;
+    align-self: start;
+    white-space: pre-line; /* Permitir quebra de linha em espaços em branco */
+    text-align: justify; /* Justificar o texto */
+    text-align-last: center; /* Centralizar a última linha do texto */
+}
+
+/* Estilos para os botões do header */
+.header-buttons {
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-self: start;
+}
+
+.header-button {
+    padding: 0.5rem 1rem; /* 8px 16px */
+    border: none;
+    border-radius: 12px; /* Cantos arredondados */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 400;
+    line-height: 1.25rem; /* 20px */
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+    margin: 0.5rem; /* Margem em cada botão */
+}
+
+/* Estilo específico para o botão de download */
+.button-download {
+    background-color: white; /* Cor branca */
+    color: black; /* Letras pretas */
+}
+
+/* Estilo específico para o botão do navegador */
+.button-browser {
+    background-color: black; /* Cor preta */
+    color: white; /* Letras brancas */
+}
+
+/* Section Styles */
+section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1.5rem; /* 24px */
+    padding: 2.5rem 1.5rem; /* 40px 24px */
+    text-align: center;
+}
+
+.section-container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 8px; /* Reduzir o espaçamento inferior */
+}
+
+.section-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 0; /* Remover o espaçamento superior */
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+
+.criar-espaco, .encontrar-amigos, .grupos, .tecnologia {
+    display: grid;
+    grid-gap: 16px; /* Reduzir o espaçamento entre os elementos */
+    background-color: #f9f9f9;
+    margin: 0;
+    align-items: center;
+}
+
+.criar-espaco {
+    height: 573px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "imagem texto";
+}
+
+.criar-espaco img {
+    grid-area: imagem;
+}
+
+.criar-espaco div {
+    grid-area: texto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px; /* Reduzir o espaçamento entre o título e o texto */
+}
+
+.encontrar-amigos {
+    height: 507px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "texto imagem";
+}
+
+.encontrar-amigos img {
+    grid-area: imagem;
+}
+
+.encontrar-amigos div {
+    grid-area: texto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px; /* Reduzir o espaçamento entre o título e o texto */
+}
+
+.grupos {
+    height: 507px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "imagem texto";
+}
+
+.grupos img {
+    grid-area: imagem;
+}
+
+.grupos div {
+    grid-area: texto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px; /* Reduzir o espaçamento entre o título e o texto */
+}
+
+.tecnologia {
+    height: 560px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "texto" "imagem";
+}
+
+.tecnologia img {
+    grid-area: imagem;
+    justify-self: center;
+}
+
+.tecnologia div {
+    grid-area: texto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 8px; /* Reduzir o espaçamento entre o título e o texto */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-container .icon {
+    width: 56.89px;
+    height: 43.08px;
+    justify-self: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-content {
+        grid-template-rows: 1fr 2fr 2fr;
+        padding: 0 1rem;
+    }
+
+    .header-title {
+        font-size: 1.5rem; /* 24px */
+        line-height: 1.75rem; /* 28px */
+    }
+
+    .header-paragraph {
+        font-size: 0.875rem; /* 14px */
+        line-height: 1.125rem; /* 18px */
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 0.75rem; /* 12px */
+    }
+
+    .header-button {
+        width: 100%;
+        padding: 0.75rem; /* 12px */
+        border-radius: 12px; /* Cantos arredondados */
+        margin: 0.5rem; /* Margem em cada botão */
+    }
+
+    .criar-espaco, .encontrar-amigos, .grupos, .tecnologia {
+        grid-template-columns: 1fr;
+        grid-template-areas: "imagem" "texto";
+    }
+
+    .tecnologia {
+        grid-template-areas: "texto" "imagem";
+    }
+}
